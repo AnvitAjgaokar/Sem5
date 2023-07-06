@@ -17,6 +17,8 @@ class OnBoardingPage extends StatelessWidget {
       color: Colors.white,
       padding: EdgeInsets.only(bottom: 30),
       child: IntroductionScreen(
+        // autoScrollDuration: 3000,
+        // allowImplicitScrolling: true,
 
         pages: [
           PageViewModel(
@@ -39,6 +41,7 @@ class OnBoardingPage extends StatelessWidget {
             ,
 
             decoration: getPageDecoration(),
+
 
           ),
 

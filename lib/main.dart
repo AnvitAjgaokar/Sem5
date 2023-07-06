@@ -1,7 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:sem5demo1/onboarding/onboardingscreen.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+
+  ]);
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   static final String title = 'Onboarding Example';
