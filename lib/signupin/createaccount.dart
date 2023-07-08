@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:sem5demo1/account/newaccount.dart';
 import 'package:sem5demo1/onboarding/onboardingscreen.dart';
 import 'package:sem5demo1/signupin/login.dart';
 import 'package:sem5demo1/signupin/sigin.dart';
@@ -185,6 +186,7 @@ class _SignUpPageState extends State<SignUpPage> {
                   child: ElevatedButton(
                     onPressed: () {
                       _submitForm();
+                      goNewAccount(context);
                     },
                     child: Text('Sign up',style: TextStyle(fontSize: 15),),
                     style: ElevatedButton.styleFrom(shape: StadiumBorder(),backgroundColor: Colors.blueAccent.shade700,elevation: 9,),
@@ -281,6 +283,10 @@ class _SignUpPageState extends State<SignUpPage> {
 
   void goLogin(context) => Navigator.of(context).pushReplacement(
     MaterialPageRoute(builder: (_) => const LoginPage()),
+  );
+
+  void goNewAccount(context) => Navigator.of(context).pushReplacement(
+    MaterialPageRoute(builder: (_) => const NewAcount()),
   );
 
 
